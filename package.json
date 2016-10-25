@@ -1,0 +1,17 @@
+{
+  "name": "unit-6-game",
+  "version": "1.0.0",
+  "description": "Unit 6 Game",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Max Kohler",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-browser-sync": "*"
+  }
+}
