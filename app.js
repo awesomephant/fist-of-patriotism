@@ -180,7 +180,7 @@ var init = function () {
     //scenes[0].actors.push(new Player('enemy', 300, 550))
 
     var img2 = new Image();
-    img2.src = '/assets/background.png';
+    img2.src = './assets/background.png';
     scenes[1].background = img2;
 
     stage = new Stage(c.canvas.height)
@@ -212,7 +212,7 @@ class Player {
     if (this.id === 'p1') {
       this.animations.idle = new Animation('idle', './assets/hero-idle.png', 39, 64, 4, 2);
       this.animations.walking = new Animation('idle', './assets/hero-walking.png', 39, 64, 2, 6);
-      this.animations.jab = new Animation('idle', './assets/hero-jab.png', 39, 64, 2, 2);
+      this.animations.jab = new Animation('idle', './assets/HERO-jab.png', 39, 64, 2, 2);
       this.attacks = {};
       this.attacks.jab = new Attack('jab', [-15, 100, 40, 40], 200, 100, 1);
     }
