@@ -43,7 +43,7 @@ var init = function () {
     //scenes[0].actors.push(new Player('enemy', 300, 550))
 
     var img2 = new Image();
-    img2.src = '../assets/background.png';
+    img2.src = './assets/background.png';
     scenes[1].background = img2;
 
     stage = new Stage(c.canvas.height)
