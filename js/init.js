@@ -34,7 +34,7 @@ var init = function () {
 
     scenes.push(new Scene('title'))
 
-    scenes[0].background = new Animation('rain', '../assets/rain.png', 32, 32, 5, 10);
+    scenes[0].background = new Animation('rain', './assets/rain.png', 32, 32, 5, 10);
     scenes[0].tileBackground = true;
 
     scenes.push(new Scene('main'))

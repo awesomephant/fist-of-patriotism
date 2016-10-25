@@ -171,7 +171,7 @@ var init = function () {
 
     scenes.push(new Scene('title'))
 
-    scenes[0].background = new Animation('rain', '../assets/rain.png', 32, 32, 5, 10);
+    scenes[0].background = new Animation('rain', './assets/rain.png', 32, 32, 5, 10);
     scenes[0].tileBackground = true;
 
     scenes.push(new Scene('main'))
@@ -210,17 +210,17 @@ class Player {
     this.facing = 'left';
     this.animations = {}
     if (this.id === 'p1') {
-      this.animations.idle = new Animation('idle', '/assets/hero-idle.png', 39, 64, 4, 2);
-      this.animations.walking = new Animation('idle', '/assets/hero-walking.png', 39, 64, 2, 6);
-      this.animations.jab = new Animation('idle', '/assets/hero-jab.png', 39, 64, 2, 2);
+      this.animations.idle = new Animation('idle', './assets/hero-idle.png', 39, 64, 4, 2);
+      this.animations.walking = new Animation('idle', './assets/hero-walking.png', 39, 64, 2, 6);
+      this.animations.jab = new Animation('idle', './assets/hero-jab.png', 39, 64, 2, 2);
       this.attacks = {};
       this.attacks.jab = new Attack('jab', [-15, 100, 40, 40], 200, 100, 1);
     }
     if (this.id === 'enemy') {
-      this.animations.idle = new Animation('idle', '/assets/enemy-idle.png', 39, 64, 2, 2);
-      this.animations.walking = new Animation('idle', '/assets/hero-walking.png', 39, 64, 2, 6);
-      this.animations.jab = new Animation('idle', '/assets/hero-jab.png', 39, 64, 2, 2);
-      this.animations.hit = new Animation('hit', '/assets/enemy-hit.png', 39, 64, 3, 6);
+      this.animations.idle = new Animation('idle', './assets/enemy-idle.png', 39, 64, 2, 2);
+      this.animations.walking = new Animation('idle', './assets/hero-walking.png', 39, 64, 2, 6);
+      this.animations.jab = new Animation('idle', './assets/hero-jab.png', 39, 64, 2, 2);
+      this.animations.hit = new Animation('hit', './assets/enemy-hit.png', 39, 64, 3, 6);
       this.attacks = {};
       this.attacks.jab = new Attack('jab', [-15, 100, 40, 40], 200, 100, 1);
     }
@@ -228,7 +228,7 @@ class Player {
     this.status = 'idle';
     this.setStatus('idle');
     this.shadow = new Image();
-    this.shadow.src = '/assets/shadow.png';
+    this.shadow.src = './assets/shadow.png';
 
   }
   setStatus(status) {
