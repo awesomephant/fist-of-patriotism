@@ -338,11 +338,11 @@ var render = function () {
   var healthImg = new Image();
   healthImg.src = '/assets/health.png';
   if (game.status === 'running') {
-    c.fillStyle = 'black';
-    c.fillRect(14, 14, 31 * p1.health + 10, 64)
+    c.fillStyle = 'red';
+
     for (var a = 0; a < p1.health; a++) {
-      var w = 31;
-      c.drawImage(healthImg, w * a + 20, 20, 30, 52.5);
+      var w = 37;
+      c.fillRect(w * a + 20, 20, 25, 40);
     }
   }
 
@@ -358,10 +358,10 @@ var render = function () {
     c.font = '45px "Press Start 2p"'
     c.fillText('GAME OVER', c.canvas.width / 2, c.canvas.height / 2)
     if (game.status === 'gameover') {
-   
-    c.font = '35px "Press Start 2p"'
-    c.fillText('Score:' + game.score, c.canvas.width / 2, c.canvas.height / 2 + 50)
-  }
+
+      c.font = '35px "Press Start 2p"'
+      c.fillText('Score:' + game.score, c.canvas.width / 2, c.canvas.height / 2 + 50)
+    }
   }
 }
 
