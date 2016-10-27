@@ -20,7 +20,7 @@ class Player {
     if (this.id === 'p1') {
       this.animations.idle = new Animation('idle', './assets/hero-idle.png', 39, 64, 4, 2);
       this.animations.walking = new Animation('idle', './assets/hero-walking.png', 39, 64, 2, 6);
-      this.animations.jab = new Animation('idle', './assets/hero-jab.png', 39, 64, 2, 2);
+      this.animations.jab = new Animation('idle', './assets/HERO-jab.png', 39, 64, 2, 2);
       this.animations.hit = new Animation('hit', './assets/enemy-hit.png', 39, 64, 3, 6);
 
       this.attacks = {};
