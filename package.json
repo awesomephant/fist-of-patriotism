@@ -12,6 +12,7 @@
     "grunt": "*",
     "grunt-contrib-concat": "*",
     "grunt-contrib-watch": "*",
-    "grunt-browser-sync": "*"
+    "grunt-browser-sync": "*",
+    "grunt-contrib-connect": "*"
   }
 }

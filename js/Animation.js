@@ -23,7 +23,7 @@ class Animation {
     return img;
   }
   tick() {
-    //   console.log('index: ' + this.currentFrameIndex + ' x: ' + this.currentFrameX)
+      // console.log('index: ' + this.currentFrameIndex + ' x: ' + this.currentFrameX)
     if (this.currentFrameIndex < this.frameCount - 1) {
       this.currentFrameIndex += 1;
       this.currentFrameX = this.width * this.currentFrameIndex;

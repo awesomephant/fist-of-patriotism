@@ -18,10 +18,14 @@ var init = function () {
         keysDown[e.keyCode] = true;
         delete keysUp[e.keyCode];
         if (e.keyCode === 32) {
-            p1.attacks.jab.execute(p1);
-            if (game.currentScene === 0) {
-                game.currentScene = 1;
+            if (game.status === 'paused') {
+                var title = document.getElementById('titlescreen');
+                title.style.display = 'none'
+                game.status = 'running';
+                spawnEnemyLoop();
+
             }
+            p1.attacks.jab.execute(p1);
         }
     }, false);
 
@@ -39,8 +43,6 @@ var init = function () {
 
     scenes.push(new Scene('main'))
     scenes[1].actors.push(new Player('p1', 50, 50))
-    scenes[1].actors.push(new Player('enemy', 400, 250))
-    //scenes[0].actors.push(new Player('enemy', 300, 550))
 
     var img2 = new Image();
     img2.src = './assets/background.png';

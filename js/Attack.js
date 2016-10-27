@@ -6,19 +6,35 @@ class Attack {
     this.cooldown = cooldown;
     this.liveHitbox = [];
     this.damage = damage;
+    this.onCooldown = false;
   }
   execute(e) {
-    this.liveHitbox = [
-      e.x + this.hitbox[0],
-      e.y + this.hitbox[1],
-      this.hitbox[2],
-      this.hitbox[3],
-    ]
-    e.setStatus('jab');
+    if (e.facing === 'left') {
+      this.liveHitbox = [
+        e.x + this.hitbox[0],
+        e.y + this.hitbox[1],
+        this.hitbox[2],
+        this.hitbox[3],
+      ]
+    } else {
+        this.liveHitbox = [
+        e.x + e.width - this.hitbox[0],
+        e.y + this.hitbox[1],
+        this.hitbox[2],
+        this.hitbox[3],
+      ] 
+    }
     var a = this;
-    setTimeout(function () {
+
+    if (this.onCooldown === false) {
+      e.setStatus('jab');
       checkHit(e, a);
-      e.cooldown(a.cooldown);
-    }, a.duration)
+      this.onCooldown = true;
+      setTimeout(function () {
+        e.reset();
+        a.onCooldown = false;
+      }, a.cooldown)
+
+    }
   }
 }

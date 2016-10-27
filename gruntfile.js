@@ -12,6 +12,18 @@ module.exports = function (grunt) {
                 dest: './app.js',
             },
         },
+        babel: {
+            options: {
+                sourceMap: true,
+                presets: ['es2015']
+            },
+            dist: {
+                files: {
+                    './app-compiled.js': './app.js'
+                }
+            }
+        },
+
         browserSync: {
             dev: {
                 bsFiles: {
@@ -30,6 +42,7 @@ module.exports = function (grunt) {
 
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-browser-sync');
 
     grunt.registerTask('default', ['browserSync', 'watch']);
