@@ -335,8 +335,6 @@ var render = function () {
   c.fillStyle = 'black'
   c.font = '25px "Press Start 2p"'
 
-  var healthImg = new Image();
-  healthImg.src = '/assets/health.png';
   if (game.status === 'running') {
     c.fillStyle = 'red';
 
